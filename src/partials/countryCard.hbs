@@ -1,0 +1,17 @@
+<div class="country-card-js">
+    <h2 class="title-js">{{name}}</h2>
+    <ul class="list-js">
+        <li class="item-js">Capial: {{capital}}</li>
+        <li class="item-js">Population: {{population}}</li>
+        <li class="item-js">Languages:
+            <ul>
+                {{#each languages}}
+                <li>{{this.name}}</li>
+                {{/each}}
+            </ul>
+        </li>
+
+    </ul>
+
+    <img class="flag-js" src="{{flag}}" alt="flag of {{name}}" width="500px">
+</div>

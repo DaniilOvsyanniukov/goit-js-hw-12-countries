@@ -1,0 +1,75 @@
+body {
+  background-color: $color-title;
+  color: $color-primary-text;
+  font-family: 'Roboto', sans-serif;
+  @include font();
+}
+
+.container {
+  margin: 20px;
+
+  .input-countries {
+    display: block;
+    margin: 0 auto;
+    background-color: $color-primary-background;
+    border: 2px solid $color-accent;
+    border-radius: 10px;
+    min-width: 60px;
+    @include font($fs: 40px);
+  }
+  ::placeholder {
+    text-align: center;
+    @include font($fs: 30px);
+  }
+}
+
+.country-card-js {
+  display: grid;
+  max-width: 800px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(40px, auto);
+  grid-gap: 1em;
+
+  @include font($fw: 500, $fs: 20px);
+  .title-js {
+    grid-column: 1/3;
+    grid-row: 1;
+    text-align: center;
+    @include font($fw: 700, $fs: 30px);
+  }
+  .list-js {
+    list-style: none;
+  }
+  .item-js:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .countries-list-js {
+    grid-column: 1/3;
+    display: block;
+    margin: 20px auto;
+    .items-js {
+      margin: 10px auto;
+    }
+  }
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: 2fr 0.1fr 2fr 0.1fr 2fr 0.1fr 2fr;
+  grid-auto-rows: minmax(40px, auto);
+  grid-gap: 0.5em;
+
+  margin-top: 50px;
+
+  .field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .colon {
+    justify-self: center;
+    @include font($fs: 40px);
+  }
+}
